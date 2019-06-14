@@ -1,0 +1,40 @@
+<mat-toolbar color="warn">
+        <span class="fill-remaining-space">
+              <button mat-icon-button [matMenuTriggerFor]="menu">
+                <mat-icon>menu</mat-icon>
+              </button>
+              <mat-menu #menu="matMenu" [overlapTrigger]="false">
+                  <button mat-menu-item routerLink="">
+                    <mat-icon>home</mat-icon>
+                    <span>Home</span>
+                  </button>
+                <button mat-menu-item routerLink="employees">
+                  <mat-icon>people</mat-icon>
+                  <span>FindAll</span>
+                </button>
+                <button mat-menu-item routerLink="employee/find-by-id">
+                  <mat-icon>person_outline</mat-icon>
+                  <span>FindById</span>
+                </button>
+                <button mat-menu-item routerLink="employee/update">
+                  <mat-icon>update</mat-icon>
+                  <span>Update</span>
+                </button>
+                <button mat-menu-item routerLink="employee/add">
+                  <mat-icon>person_add</mat-icon>
+                  <span>Create</span>
+                </button>
+                <button mat-menu-item routerLink="employee/delete">
+                    <mat-icon>delete</mat-icon>
+                    <span>Delete</span>
+                </button>
+              </mat-menu>
+            </span>
+        <span class="fill-remaining-space">Employee Management</span>
+    </mat-toolbar>
+    <mat-card>
+      <mat-card-content>
+        <span>employee-form works!</span>
+      </mat-card-content>
+    </mat-card>
+    <router-outlet></router-outlet>
